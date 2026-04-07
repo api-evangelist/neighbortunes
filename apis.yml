@@ -1,9 +1,9 @@
 aid: neighbortunes
-name: neighbortunes
+name: Neighbortunes
 description: >-
-  Welcome to NEIGHBORTUNES! The officially unofficial home of all things
-  Neighbor. This site is a work in progress but we hope you enjoy being able to
-  look up setlists, songs, teases, venues, band stats, and much more! 
+  Welcome to NEIGHBORTUNES! The officially unofficial home of all things Neighbor.
+  This site is a work in progress but we hope you enjoy being able to look up setlists,
+  songs, teases, venues, band stats, and much more!
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -17,11 +17,11 @@ url: >-
 specificationVersion: '0.19'
 apis:
   - aid: neighbortunes:neighbortunes
-    name: neighbortunes
+    name: Neighbortunes
     description: >-
-      Welcome to NEIGHBORTUNES! The officially unofficial home of all things
-      Neighbor. This site is a work in progress but we hope you enjoy being able
-      to look up setlists, songs, teases, venues, band stats, and much more! 
+      Welcome to NEIGHBORTUNES! The officially unofficial home of all things Neighbor.
+      This site is a work in progress but we hope you enjoy being able to look up
+      setlists, songs, teases, venues, band stats, and much more!
     humanURL: ' https://www.neighbortunes.net/'
     tags:
       - API
