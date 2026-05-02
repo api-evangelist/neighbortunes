@@ -1,41 +1,41 @@
-# neighbortunes (neighbortunes)
-Welcome to NEIGHBORTUNES! The officially unofficial home of all things Neighbor. This site is a work in progress but we hope you enjoy being able to look up setlists, songs, teases, venues, band stats, and much more! 
+# Neighbortunes (neighbortunes)
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/neighbortunes/refs/heads/main/apis.yml)
+Welcome to NEIGHBORTUNES! The officially unofficial home of all things Neighbor. The site exposes a public REST API for setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads, and band appearances. No authentication is required.
+
+**APIs.json:** [apis.yml](https://raw.githubusercontent.com/api-evangelist/neighbortunes/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
 
-## Tags:
+## Tags
 
- - API
+- Music
+- Setlists
+- Fan Site
 
 ## Timestamps
 
-- **Created:** 2025-02-09 
-- **Modified:** 2026-03-16 
+- **Created:** 2025-02-09
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### neighbortunes
-Welcome to NEIGHBORTUNES! The officially unofficial home of all things Neighbor. This site is a work in progress but we hope you enjoy being able to look up setlists, songs, teases, venues, band stats, and much more! 
+### Neighbortunes
 
-**Human URL:** [ https://www.neighbortunes.net/]( https://www.neighbortunes.net/)
+The Neighbortunes REST API exposes setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads, and appearances.
 
-
-#### Tags:
-
- - API
+- **Human URL:** https://www.neighbortunes.net/
+- **Base URL:** https://neighbortunes.net/api/v2
 
 #### Properties
 
-- [Documentation]( https://www.neighbortunes.net/)
+- [Documentation](https://www.neighbortunes.net/api/docs.php)
+- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/neighbortunes/refs/heads/main/openapi/neighbortunes-openapi.yml)
 
 ## Maintainers
 
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **FN:** Kin Lane
+- **Email:** kin@apievangelist.com

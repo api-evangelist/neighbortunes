@@ -1,0 +1,255 @@
+openapi: 3.0.3
+info:
+  title: Neighbortunes API
+  description: >-
+    The unofficial Neighbortunes API provides access to setlists, shows, songs,
+    venues, jamcharts, albums, metadata, links, uploads, and band appearances.
+    No authentication is required.
+  version: '2.0'
+  contact:
+    name: Neighbortunes
+    url: https://www.neighbortunes.net
+servers:
+  - url: https://neighbortunes.net/api/v2
+    description: Neighbortunes v2 API
+paths:
+  /setlists.{format}:
+    get:
+      summary: List setlists
+      operationId: listSetlists
+      parameters:
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/OrderBy'
+        - $ref: '#/components/parameters/Direction'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /setlists/{id}.{format}:
+    get:
+      summary: Get a setlist by ID
+      operationId: getSetlist
+      parameters:
+        - $ref: '#/components/parameters/Id'
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /setlists/{column}/{value}.{format}:
+    get:
+      summary: Query setlists by column value
+      operationId: querySetlists
+      parameters:
+        - $ref: '#/components/parameters/Column'
+        - $ref: '#/components/parameters/Value'
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/OrderBy'
+        - $ref: '#/components/parameters/Direction'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /latest.{format}:
+    get:
+      summary: Latest entries
+      operationId: listLatest
+      parameters:
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /shows.{format}:
+    get:
+      summary: List shows
+      operationId: listShows
+      parameters:
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/OrderBy'
+        - $ref: '#/components/parameters/Direction'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /shows/{id}.{format}:
+    get:
+      summary: Get a show by ID
+      operationId: getShow
+      parameters:
+        - $ref: '#/components/parameters/Id'
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /songs.{format}:
+    get:
+      summary: List songs
+      operationId: listSongs
+      parameters:
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/OrderBy'
+        - $ref: '#/components/parameters/Direction'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /songs/{id}.{format}:
+    get:
+      summary: Get a song by ID
+      operationId: getSong
+      parameters:
+        - $ref: '#/components/parameters/Id'
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /venues.{format}:
+    get:
+      summary: List venues
+      operationId: listVenues
+      parameters:
+        - $ref: '#/components/parameters/Format'
+        - $ref: '#/components/parameters/OrderBy'
+        - $ref: '#/components/parameters/Direction'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /venues/{id}.{format}:
+    get:
+      summary: Get a venue by ID
+      operationId: getVenue
+      parameters:
+        - $ref: '#/components/parameters/Id'
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /jamcharts.{format}:
+    get:
+      summary: List jamcharts
+      operationId: listJamcharts
+      parameters:
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /albums.{format}:
+    get:
+      summary: List albums
+      operationId: listAlbums
+      parameters:
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /metadata.{format}:
+    get:
+      summary: List metadata
+      operationId: listMetadata
+      parameters:
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /links.{format}:
+    get:
+      summary: List links
+      operationId: listLinks
+      parameters:
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /uploads.{format}:
+    get:
+      summary: List uploads
+      operationId: listUploads
+      parameters:
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /appearances.{format}:
+    get:
+      summary: List appearances
+      operationId: listAppearances
+      parameters:
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+  /list/{column}.{format}:
+    get:
+      summary: List unique values for a column
+      operationId: listColumn
+      parameters:
+        - $ref: '#/components/parameters/Column'
+        - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+components:
+  parameters:
+    Format:
+      name: format
+      in: path
+      required: true
+      schema:
+        type: string
+        enum: [json, html]
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    Column:
+      name: column
+      in: path
+      required: true
+      schema:
+        type: string
+    Value:
+      name: value
+      in: path
+      required: true
+      schema:
+        type: string
+    OrderBy:
+      name: order_by
+      in: query
+      schema:
+        type: string
+    Direction:
+      name: direction
+      in: query
+      schema:
+        type: string
+        enum: [asc, desc]
+        default: asc
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+  responses:
+    StandardResponse:
+      description: Standard JSON or HTML response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: integer
+                description: 0 for success, 1 for failure
+              error_message:
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+        text/html:
+          schema:
+            type: string
