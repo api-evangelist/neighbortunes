@@ -1,0 +1,556 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Neighbortunes API
+  description: The unofficial Neighbortunes API provides access to setlists, shows, songs, venues, jamcharts, albums, metadata,
+    links, uploads, and band appearances. No authentication is required.
+  tags:
+  - Neighbortunes
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: neighbortunes
+    baseUri: https://neighbortunes.net/api/v2
+    description: Neighbortunes API HTTP API.
+    resources:
+    - name: setlists-format
+      path: /setlists.{format}
+      operations:
+      - name: listsetlists
+        method: GET
+        description: List setlists
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: setlists-id-format
+      path: /setlists/{id}.{format}
+      operations:
+      - name: getsetlist
+        method: GET
+        description: Get a setlist by ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: setlists-column-value-format
+      path: /setlists/{column}/{value}.{format}
+      operations:
+      - name: querysetlists
+        method: GET
+        description: Query setlists by column value
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: latest-format
+      path: /latest.{format}
+      operations:
+      - name: listlatest
+        method: GET
+        description: Latest entries
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: shows-format
+      path: /shows.{format}
+      operations:
+      - name: listshows
+        method: GET
+        description: List shows
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: shows-id-format
+      path: /shows/{id}.{format}
+      operations:
+      - name: getshow
+        method: GET
+        description: Get a show by ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: songs-format
+      path: /songs.{format}
+      operations:
+      - name: listsongs
+        method: GET
+        description: List songs
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: songs-id-format
+      path: /songs/{id}.{format}
+      operations:
+      - name: getsong
+        method: GET
+        description: Get a song by ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: venues-format
+      path: /venues.{format}
+      operations:
+      - name: listvenues
+        method: GET
+        description: List venues
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: venues-id-format
+      path: /venues/{id}.{format}
+      operations:
+      - name: getvenue
+        method: GET
+        description: Get a venue by ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: jamcharts-format
+      path: /jamcharts.{format}
+      operations:
+      - name: listjamcharts
+        method: GET
+        description: List jamcharts
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: albums-format
+      path: /albums.{format}
+      operations:
+      - name: listalbums
+        method: GET
+        description: List albums
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: metadata-format
+      path: /metadata.{format}
+      operations:
+      - name: listmetadata
+        method: GET
+        description: List metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: links-format
+      path: /links.{format}
+      operations:
+      - name: listlinks
+        method: GET
+        description: List links
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: uploads-format
+      path: /uploads.{format}
+      operations:
+      - name: listuploads
+        method: GET
+        description: List uploads
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: appearances-format
+      path: /appearances.{format}
+      operations:
+      - name: listappearances
+        method: GET
+        description: List appearances
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: list-column-format
+      path: /list/{column}.{format}
+      operations:
+      - name: listcolumn
+        method: GET
+        description: List unique values for a column
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: neighbortunes-rest
+    description: REST adapter for Neighbortunes API.
+    resources:
+    - path: /setlists.{format}
+      name: listsetlists
+      operations:
+      - method: GET
+        name: listsetlists
+        description: List setlists
+        call: neighbortunes.listsetlists
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /setlists/{id}.{format}
+      name: getsetlist
+      operations:
+      - method: GET
+        name: getsetlist
+        description: Get a setlist by ID
+        call: neighbortunes.getsetlist
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /setlists/{column}/{value}.{format}
+      name: querysetlists
+      operations:
+      - method: GET
+        name: querysetlists
+        description: Query setlists by column value
+        call: neighbortunes.querysetlists
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /latest.{format}
+      name: listlatest
+      operations:
+      - method: GET
+        name: listlatest
+        description: Latest entries
+        call: neighbortunes.listlatest
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /shows.{format}
+      name: listshows
+      operations:
+      - method: GET
+        name: listshows
+        description: List shows
+        call: neighbortunes.listshows
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /shows/{id}.{format}
+      name: getshow
+      operations:
+      - method: GET
+        name: getshow
+        description: Get a show by ID
+        call: neighbortunes.getshow
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /songs.{format}
+      name: listsongs
+      operations:
+      - method: GET
+        name: listsongs
+        description: List songs
+        call: neighbortunes.listsongs
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /songs/{id}.{format}
+      name: getsong
+      operations:
+      - method: GET
+        name: getsong
+        description: Get a song by ID
+        call: neighbortunes.getsong
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /venues.{format}
+      name: listvenues
+      operations:
+      - method: GET
+        name: listvenues
+        description: List venues
+        call: neighbortunes.listvenues
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /venues/{id}.{format}
+      name: getvenue
+      operations:
+      - method: GET
+        name: getvenue
+        description: Get a venue by ID
+        call: neighbortunes.getvenue
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /jamcharts.{format}
+      name: listjamcharts
+      operations:
+      - method: GET
+        name: listjamcharts
+        description: List jamcharts
+        call: neighbortunes.listjamcharts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /albums.{format}
+      name: listalbums
+      operations:
+      - method: GET
+        name: listalbums
+        description: List albums
+        call: neighbortunes.listalbums
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /metadata.{format}
+      name: listmetadata
+      operations:
+      - method: GET
+        name: listmetadata
+        description: List metadata
+        call: neighbortunes.listmetadata
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /links.{format}
+      name: listlinks
+      operations:
+      - method: GET
+        name: listlinks
+        description: List links
+        call: neighbortunes.listlinks
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /uploads.{format}
+      name: listuploads
+      operations:
+      - method: GET
+        name: listuploads
+        description: List uploads
+        call: neighbortunes.listuploads
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /appearances.{format}
+      name: listappearances
+      operations:
+      - method: GET
+        name: listappearances
+        description: List appearances
+        call: neighbortunes.listappearances
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /list/{column}.{format}
+      name: listcolumn
+      operations:
+      - method: GET
+        name: listcolumn
+        description: List unique values for a column
+        call: neighbortunes.listcolumn
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: neighbortunes-mcp
+    transport: http
+    description: MCP adapter for Neighbortunes API for AI agent use.
+    tools:
+    - name: listsetlists
+      description: List setlists
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listsetlists
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getsetlist
+      description: Get a setlist by ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.getsetlist
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: querysetlists
+      description: Query setlists by column value
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.querysetlists
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listlatest
+      description: Latest entries
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listlatest
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listshows
+      description: List shows
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listshows
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getshow
+      description: Get a show by ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.getshow
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listsongs
+      description: List songs
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listsongs
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getsong
+      description: Get a song by ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.getsong
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listvenues
+      description: List venues
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listvenues
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getvenue
+      description: Get a venue by ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.getvenue
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listjamcharts
+      description: List jamcharts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listjamcharts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listalbums
+      description: List albums
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listalbums
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listmetadata
+      description: List metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listmetadata
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listlinks
+      description: List links
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listlinks
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listuploads
+      description: List uploads
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listuploads
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listappearances
+      description: List appearances
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listappearances
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listcolumn
+      description: List unique values for a column
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: neighbortunes.listcolumn
+      outputParameters:
+      - type: object
+        mapping: $.
