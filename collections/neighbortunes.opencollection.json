@@ -1,0 +1,431 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Neighbortunes API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List setlists",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/setlists.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "order_by",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "direction",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List setlists"
+    },
+    {
+      "info": {
+        "name": "Get a setlist by ID",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/setlists/:id.:format",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a setlist by ID"
+    },
+    {
+      "info": {
+        "name": "Query setlists by column value",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/setlists/:column/:value.:format",
+        "params": [
+          {
+            "name": "column",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "value",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "order_by",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "direction",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Query setlists by column value"
+    },
+    {
+      "info": {
+        "name": "Latest entries",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/latest.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Latest entries"
+    },
+    {
+      "info": {
+        "name": "List shows",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/shows.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "order_by",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "direction",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List shows"
+    },
+    {
+      "info": {
+        "name": "Get a show by ID",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/shows/:id.:format",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a show by ID"
+    },
+    {
+      "info": {
+        "name": "List songs",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/songs.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "order_by",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "direction",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List songs"
+    },
+    {
+      "info": {
+        "name": "Get a song by ID",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/songs/:id.:format",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a song by ID"
+    },
+    {
+      "info": {
+        "name": "List venues",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/venues.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "order_by",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "direction",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List venues"
+    },
+    {
+      "info": {
+        "name": "Get a venue by ID",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/venues/:id.:format",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a venue by ID"
+    },
+    {
+      "info": {
+        "name": "List jamcharts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/jamcharts.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List jamcharts"
+    },
+    {
+      "info": {
+        "name": "List albums",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/albums.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List albums"
+    },
+    {
+      "info": {
+        "name": "List metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/metadata.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List metadata"
+    },
+    {
+      "info": {
+        "name": "List links",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/links.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List links"
+    },
+    {
+      "info": {
+        "name": "List uploads",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/uploads.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List uploads"
+    },
+    {
+      "info": {
+        "name": "List appearances",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/appearances.:format",
+        "params": [
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List appearances"
+    },
+    {
+      "info": {
+        "name": "List unique values for a column",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://neighbortunes.net/api/v2/list/:column.:format",
+        "params": [
+          {
+            "name": "column",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List unique values for a column"
+    }
+  ],
+  "bundled": true
+}
