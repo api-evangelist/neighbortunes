@@ -37,5 +37,7 @@ maintainers:
     email: kin@apievangelist.com
 common: []
 common:
+- type: AgenticAccess
+  url: agentic-access/neighbortunes-agentic-access.yml
 - type: DomainSecurity
   url: security/neighbortunes-domain-security.yml
