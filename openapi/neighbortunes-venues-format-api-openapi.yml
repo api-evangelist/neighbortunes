@@ -1,0 +1,78 @@
+openapi: 3.0.3
+info:
+  title: Neighbortunes Albums.{format} Albums.{format} Venues.{format} API
+  description: The unofficial Neighbortunes API provides access to setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads, and band appearances. No authentication is required.
+  version: '2.0'
+  contact:
+    name: Neighbortunes
+    url: https://www.neighbortunes.net
+servers:
+- url: https://neighbortunes.net/api/v2
+  description: Neighbortunes v2 API
+tags:
+- name: Venues.{format}
+paths:
+  /venues.{format}:
+    get:
+      summary: List venues
+      operationId: listVenues
+      parameters:
+      - $ref: '#/components/parameters/Format'
+      - $ref: '#/components/parameters/OrderBy'
+      - $ref: '#/components/parameters/Direction'
+      - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+      tags:
+      - Venues.{format}
+components:
+  parameters:
+    OrderBy:
+      name: order_by
+      in: query
+      schema:
+        type: string
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+    Direction:
+      name: direction
+      in: query
+      schema:
+        type: string
+        enum:
+        - asc
+        - desc
+        default: asc
+    Format:
+      name: format
+      in: path
+      required: true
+      schema:
+        type: string
+        enum:
+        - json
+        - html
+  responses:
+    StandardResponse:
+      description: Standard JSON or HTML response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: integer
+                description: 0 for success, 1 for failure
+              error_message:
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+        text/html:
+          schema:
+            type: string

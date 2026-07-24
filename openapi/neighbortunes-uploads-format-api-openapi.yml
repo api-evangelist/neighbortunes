@@ -1,0 +1,56 @@
+openapi: 3.0.3
+info:
+  title: Neighbortunes Albums.{format} Albums.{format} Uploads.{format} API
+  description: The unofficial Neighbortunes API provides access to setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads, and band appearances. No authentication is required.
+  version: '2.0'
+  contact:
+    name: Neighbortunes
+    url: https://www.neighbortunes.net
+servers:
+- url: https://neighbortunes.net/api/v2
+  description: Neighbortunes v2 API
+tags:
+- name: Uploads.{format}
+paths:
+  /uploads.{format}:
+    get:
+      summary: List uploads
+      operationId: listUploads
+      parameters:
+      - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          $ref: '#/components/responses/StandardResponse'
+      tags:
+      - Uploads.{format}
+components:
+  parameters:
+    Format:
+      name: format
+      in: path
+      required: true
+      schema:
+        type: string
+        enum:
+        - json
+        - html
+  responses:
+    StandardResponse:
+      description: Standard JSON or HTML response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: integer
+                description: 0 for success, 1 for failure
+              error_message:
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+        text/html:
+          schema:
+            type: string
