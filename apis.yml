@@ -4,9 +4,21 @@ description: >-
   Welcome to NEIGHBORTUNES! The officially unofficial home of all things Neighbor. This site is a work in progress but
   we hope you enjoy being able to look up setlists, songs, teases, venues, band stats, and much more!
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/neighbortunes.png
 tags:
   - Music
   - Setlists
@@ -16,22 +28,199 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/neighbortunes/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: neighbortunes:neighbortunes
-    name: Neighbortunes
-    description: >-
-      The Neighbortunes REST API exposes setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads,
-      and appearances. No authentication required.
-    humanURL: https://www.neighbortunes.net/
-    baseURL: https://neighbortunes.net/api/v2
-    tags:
-      - Music
-      - Setlists
-    properties:
-      - type: Documentation
-        url: https://www.neighbortunes.net/api/docs.php
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/neighbortunes/refs/heads/main/openapi/neighbortunes-openapi.yml
+- aid: neighbortunes:neighbortunes-albums-format-api
+  name: Neighbortunes Albums.{format} API
+  description: The Albums.{format} API from Neighbortunes — 1 operation(s) for albums.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Albums.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-albums-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-appearances-format-api
+  name: Neighbortunes Appearances.{format} API
+  description: >-
+    The Appearances.{format} API from Neighbortunes — 1 operation(s) for appearances.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Appearances.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-appearances-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-jamcharts-format-api
+  name: Neighbortunes Jamcharts.{format} API
+  description: The Jamcharts.{format} API from Neighbortunes — 1 operation(s) for jamcharts.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Jamcharts.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-jamcharts-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-latest-format-api
+  name: Neighbortunes Latest.{format} API
+  description: The Latest.{format} API from Neighbortunes — 1 operation(s) for latest.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Latest.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-latest-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-links-format-api
+  name: Neighbortunes Links.{format} API
+  description: The Links.{format} API from Neighbortunes — 1 operation(s) for links.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Links.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-links-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-list-api
+  name: Neighbortunes List API
+  description: The List API from Neighbortunes — 1 operation(s) for list.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - List
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-list-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-metadata-format-api
+  name: Neighbortunes Metadata.{format} API
+  description: The Metadata.{format} API from Neighbortunes — 1 operation(s) for metadata.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Metadata.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-metadata-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-setlists-api
+  name: Neighbortunes Setlists API
+  description: The Setlists API from Neighbortunes — 2 operation(s) for setlists.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Setlists
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-setlists-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-setlists-format-api
+  name: Neighbortunes Setlists.{format} API
+  description: The Setlists.{format} API from Neighbortunes — 1 operation(s) for setlists.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Setlists.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-setlists-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-shows-api
+  name: Neighbortunes Shows API
+  description: The Shows API from Neighbortunes — 1 operation(s) for shows.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Shows
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-shows-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-shows-format-api
+  name: Neighbortunes Shows.{format} API
+  description: The Shows.{format} API from Neighbortunes — 1 operation(s) for shows.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Shows.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-shows-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-songs-api
+  name: Neighbortunes Songs API
+  description: The Songs API from Neighbortunes — 1 operation(s) for songs.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Songs
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-songs-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-songs-format-api
+  name: Neighbortunes Songs.{format} API
+  description: The Songs.{format} API from Neighbortunes — 1 operation(s) for songs.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Songs.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-songs-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-uploads-format-api
+  name: Neighbortunes Uploads.{format} API
+  description: The Uploads.{format} API from Neighbortunes — 1 operation(s) for uploads.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Uploads.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-uploads-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-venues-api
+  name: Neighbortunes Venues API
+  description: The Venues API from Neighbortunes — 1 operation(s) for venues.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Venues
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-venues-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
+- aid: neighbortunes:neighbortunes-venues-format-api
+  name: Neighbortunes Venues.{format} API
+  description: The Venues.{format} API from Neighbortunes — 1 operation(s) for venues.{format}.
+  humanURL: https://www.neighbortunes.net/
+  baseURL: https://neighbortunes.net/api/v2
+  tags:
+  - Venues.{format}
+  properties:
+  - type: OpenAPI
+    url: openapi/neighbortunes-venues-format-api-openapi.yml
+  - type: Documentation
+    url: https://www.neighbortunes.net/api/docs.php
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
