@@ -26,7 +26,7 @@ tags:
 created: '2025-02-09'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/neighbortunes/refs/heads/main/apis.yml
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: neighbortunes:neighbortunes-albums-format-api
   name: Neighbortunes Albums.{format} API
