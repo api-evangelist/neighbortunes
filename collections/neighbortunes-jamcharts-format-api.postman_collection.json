@@ -1,0 +1,109 @@
+{
+  "item": [
+    {
+      "id": "e728a4a3-c16d-4352-8276-ad037daa7a09",
+      "name": "Jamcharts.{format}",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "50b10902-114f-411e-b529-eb9c804853da",
+          "name": "List jamcharts",
+          "request": {
+            "name": "List jamcharts",
+            "description": {},
+            "url": {
+              "path": [
+                "jamcharts.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aa9f80b3-050d-434b-baf7-f58e2a5b20c5",
+              "name": "Standard JSON or HTML response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "jamcharts.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": 7872,\n  \"error_message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://neighbortunes.net/api/v2",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "format"
+    }
+  ],
+  "info": {
+    "_postman_id": "eec5a6c7-bcdd-4301-a8e7-8211366bc366",
+    "name": "Neighbortunes Albums.{format} Albums.{format} Jamcharts.{format} API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The unofficial Neighbortunes API provides access to setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads, and band appearances. No authentication is required.\n\nContact Support:\n Name: Neighbortunes",
+      "type": "text/plain"
+    }
+  }
+}

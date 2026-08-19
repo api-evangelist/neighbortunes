@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Neighbortunes Albums.{format} Albums.{format} Appearances.{format} API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Appearances.{format}",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List appearances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://neighbortunes.net/api/v2/appearances.:format",
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List appearances"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,121 @@
+{
+  "item": [
+    {
+      "id": "3afbffd7-96bf-4918-965b-c9c00902e70f",
+      "name": "Shows",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "10179c32-a6b6-4440-a3cd-2e64f9c65b4c",
+          "name": "Get a show by ID",
+          "request": {
+            "name": "Get a show by ID",
+            "description": {},
+            "url": {
+              "path": [
+                "shows",
+                "{{id}}.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3b4efa98-30ee-4fff-a776-be7f4f2182b6",
+              "name": "Standard JSON or HTML response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "shows",
+                    "{{id}}.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": 3180,\n  \"error_message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://neighbortunes.net/api/v2",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "id"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "format"
+    }
+  ],
+  "info": {
+    "_postman_id": "2ba7a65f-22c0-4c73-b9b6-369b7b931068",
+    "name": "Neighbortunes Albums.{format} Albums.{format} Shows API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The unofficial Neighbortunes API provides access to setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads, and band appearances. No authentication is required.\n\nContact Support:\n Name: Neighbortunes",
+      "type": "text/plain"
+    }
+  }
+}

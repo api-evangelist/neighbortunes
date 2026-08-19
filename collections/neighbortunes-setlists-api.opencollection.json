@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Neighbortunes Albums.{format} Albums.{format} Setlists API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Setlists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a setlist by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://neighbortunes.net/api/v2/setlists/:id.:format",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a setlist by ID"
+        },
+        {
+          "info": {
+            "name": "Query setlists by column value",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://neighbortunes.net/api/v2/setlists/:column/:value.:format",
+            "params": [
+              {
+                "name": "column",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "value",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "order_by",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "direction",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Query setlists by column value"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

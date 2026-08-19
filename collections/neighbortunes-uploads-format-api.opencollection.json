@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Neighbortunes Albums.{format} Albums.{format} Uploads.{format} API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Uploads.{format}",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List uploads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://neighbortunes.net/api/v2/uploads.:format",
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List uploads"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

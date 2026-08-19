@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Neighbortunes Albums.{format} Albums.{format} List API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List unique values for a column",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://neighbortunes.net/api/v2/list/:column.:format",
+            "params": [
+              {
+                "name": "column",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List unique values for a column"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

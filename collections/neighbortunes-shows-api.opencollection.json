@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Neighbortunes Albums.{format} Albums.{format} Shows API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Shows",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a show by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://neighbortunes.net/api/v2/shows/:id.:format",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a show by ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
