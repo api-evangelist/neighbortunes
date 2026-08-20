@@ -33,7 +33,8 @@ apis:
   description: The Albums.{format} API from Neighbortunes — 1 operation(s) for albums.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Albums.{format}
   properties:
   - type: OpenAPI
@@ -46,7 +47,8 @@ apis:
     The Appearances.{format} API from Neighbortunes — 1 operation(s) for appearances.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Appearances.{format}
   properties:
   - type: OpenAPI
@@ -58,7 +60,8 @@ apis:
   description: The Jamcharts.{format} API from Neighbortunes — 1 operation(s) for jamcharts.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Jamcharts.{format}
   properties:
   - type: OpenAPI
@@ -70,7 +73,8 @@ apis:
   description: The Latest.{format} API from Neighbortunes — 1 operation(s) for latest.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Latest.{format}
   properties:
   - type: OpenAPI
@@ -82,7 +86,8 @@ apis:
   description: The Links.{format} API from Neighbortunes — 1 operation(s) for links.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Links.{format}
   properties:
   - type: OpenAPI
@@ -106,7 +111,8 @@ apis:
   description: The Metadata.{format} API from Neighbortunes — 1 operation(s) for metadata.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Metadata.{format}
   properties:
   - type: OpenAPI
@@ -130,7 +136,8 @@ apis:
   description: The Setlists.{format} API from Neighbortunes — 1 operation(s) for setlists.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Setlists.{format}
   properties:
   - type: OpenAPI
@@ -154,7 +161,8 @@ apis:
   description: The Shows.{format} API from Neighbortunes — 1 operation(s) for shows.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Shows.{format}
   properties:
   - type: OpenAPI
@@ -178,7 +186,8 @@ apis:
   description: The Songs.{format} API from Neighbortunes — 1 operation(s) for songs.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Songs.{format}
   properties:
   - type: OpenAPI
@@ -190,7 +199,8 @@ apis:
   description: The Uploads.{format} API from Neighbortunes — 1 operation(s) for uploads.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Uploads.{format}
   properties:
   - type: OpenAPI
@@ -214,7 +224,8 @@ apis:
   description: The Venues.{format} API from Neighbortunes — 1 operation(s) for venues.{format}.
   humanURL: https://www.neighbortunes.net/
   baseURL: https://neighbortunes.net/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - Venues.{format}
   properties:
   - type: OpenAPI
