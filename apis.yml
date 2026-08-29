@@ -4,6 +4,17 @@ description: >-
   Welcome to NEIGHBORTUNES! The officially unofficial home of all things Neighbor. This site is a work in progress but
   we hope you enjoy being able to look up setlists, songs, teases, venues, band stats, and much more!
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
