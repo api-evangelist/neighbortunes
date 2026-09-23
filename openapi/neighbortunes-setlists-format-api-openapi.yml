@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Neighbortunes Albums.{format} Albums.{format} Setlists.{format} API
+  title: Neighbortunes Setlists.{format} API
   description: The unofficial Neighbortunes API provides access to setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads, and band appearances. No authentication is required.
   version: '2.0'
   contact:
@@ -28,16 +28,6 @@ paths:
       - Setlists.{format}
 components:
   parameters:
-    OrderBy:
-      name: order_by
-      in: query
-      schema:
-        type: string
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
     Direction:
       name: direction
       in: query
@@ -56,6 +46,16 @@ components:
         enum:
         - json
         - html
+    OrderBy:
+      name: order_by
+      in: query
+      schema:
+        type: string
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
   responses:
     StandardResponse:
       description: Standard JSON or HTML response

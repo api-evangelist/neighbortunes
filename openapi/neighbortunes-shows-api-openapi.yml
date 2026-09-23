@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Neighbortunes Albums.{format} Albums.{format} Shows API
+  title: Neighbortunes Shows API
   description: The unofficial Neighbortunes API provides access to setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads, and band appearances. No authentication is required.
   version: '2.0'
   contact:
