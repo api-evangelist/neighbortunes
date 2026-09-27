@@ -28,6 +28,16 @@ paths:
       - Songs.{format}
 components:
   parameters:
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+    OrderBy:
+      name: order_by
+      in: query
+      schema:
+        type: string
     Direction:
       name: direction
       in: query
@@ -46,16 +56,6 @@ components:
         enum:
         - json
         - html
-    OrderBy:
-      name: order_by
-      in: query
-      schema:
-        type: string
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
   responses:
     StandardResponse:
       description: Standard JSON or HTML response

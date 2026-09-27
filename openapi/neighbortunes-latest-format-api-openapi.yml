@@ -46,6 +46,11 @@ components:
           schema:
             type: string
   parameters:
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
     Format:
       name: format
       in: path
@@ -55,8 +60,3 @@ components:
         enum:
         - json
         - html
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer

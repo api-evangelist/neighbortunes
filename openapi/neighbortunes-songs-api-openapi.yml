@@ -25,22 +25,6 @@ paths:
       tags:
       - Songs
 components:
-  parameters:
-    Format:
-      name: format
-      in: path
-      required: true
-      schema:
-        type: string
-        enum:
-        - json
-        - html
-    Id:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: string
   responses:
     StandardResponse:
       description: Standard JSON or HTML response
@@ -61,3 +45,19 @@ components:
         text/html:
           schema:
             type: string
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    Format:
+      name: format
+      in: path
+      required: true
+      schema:
+        type: string
+        enum:
+        - json
+        - html
