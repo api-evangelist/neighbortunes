@@ -47,19 +47,23 @@ components:
       in: query
       schema:
         type: integer
-    Id:
-      name: id
+    Format:
+      name: format
       in: path
       required: true
       schema:
         type: string
-    OrderBy:
-      name: order_by
-      in: query
+        enum:
+        - json
+        - html
+    Value:
+      name: value
+      in: path
+      required: true
       schema:
         type: string
-    Column:
-      name: column
+    Id:
+      name: id
       in: path
       required: true
       schema:
@@ -73,21 +77,17 @@ components:
         - asc
         - desc
         default: asc
-    Value:
-      name: value
+    OrderBy:
+      name: order_by
+      in: query
+      schema:
+        type: string
+    Column:
+      name: column
       in: path
       required: true
       schema:
         type: string
-    Format:
-      name: format
-      in: path
-      required: true
-      schema:
-        type: string
-        enum:
-        - json
-        - html
   responses:
     StandardResponse:
       description: Standard JSON or HTML response

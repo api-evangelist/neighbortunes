@@ -25,6 +25,22 @@ paths:
       tags:
       - Shows
 components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    Format:
+      name: format
+      in: path
+      required: true
+      schema:
+        type: string
+        enum:
+        - json
+        - html
   responses:
     StandardResponse:
       description: Standard JSON or HTML response
@@ -45,19 +61,3 @@ components:
         text/html:
           schema:
             type: string
-  parameters:
-    Id:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: string
-    Format:
-      name: format
-      in: path
-      required: true
-      schema:
-        type: string
-        enum:
-        - json
-        - html

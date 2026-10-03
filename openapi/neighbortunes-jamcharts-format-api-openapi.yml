@@ -24,6 +24,16 @@ paths:
       tags:
       - Jamcharts.{format}
 components:
+  parameters:
+    Format:
+      name: format
+      in: path
+      required: true
+      schema:
+        type: string
+        enum:
+        - json
+        - html
   responses:
     StandardResponse:
       description: Standard JSON or HTML response
@@ -44,13 +54,3 @@ components:
         text/html:
           schema:
             type: string
-  parameters:
-    Format:
-      name: format
-      in: path
-      required: true
-      schema:
-        type: string
-        enum:
-        - json
-        - html

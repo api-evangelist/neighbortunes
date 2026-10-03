@@ -33,20 +33,6 @@ components:
       in: query
       schema:
         type: integer
-    OrderBy:
-      name: order_by
-      in: query
-      schema:
-        type: string
-    Direction:
-      name: direction
-      in: query
-      schema:
-        type: string
-        enum:
-        - asc
-        - desc
-        default: asc
     Format:
       name: format
       in: path
@@ -56,6 +42,20 @@ components:
         enum:
         - json
         - html
+    Direction:
+      name: direction
+      in: query
+      schema:
+        type: string
+        enum:
+        - asc
+        - desc
+        default: asc
+    OrderBy:
+      name: order_by
+      in: query
+      schema:
+        type: string
   responses:
     StandardResponse:
       description: Standard JSON or HTML response
