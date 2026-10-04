@@ -42,20 +42,22 @@ paths:
       - Setlists
 components:
   parameters:
+    OrderBy:
+      name: order_by
+      in: query
+      schema:
+        type: string
     Limit:
       name: limit
       in: query
       schema:
         type: integer
-    Format:
-      name: format
+    Column:
+      name: column
       in: path
       required: true
       schema:
         type: string
-        enum:
-        - json
-        - html
     Value:
       name: value
       in: path
@@ -68,6 +70,15 @@ components:
       required: true
       schema:
         type: string
+    Format:
+      name: format
+      in: path
+      required: true
+      schema:
+        type: string
+        enum:
+        - json
+        - html
     Direction:
       name: direction
       in: query
@@ -77,17 +88,6 @@ components:
         - asc
         - desc
         default: asc
-    OrderBy:
-      name: order_by
-      in: query
-      schema:
-        type: string
-    Column:
-      name: column
-      in: path
-      required: true
-      schema:
-        type: string
   responses:
     StandardResponse:
       description: Standard JSON or HTML response

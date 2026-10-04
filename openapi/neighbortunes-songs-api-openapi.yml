@@ -26,12 +26,6 @@ paths:
       - Songs
 components:
   parameters:
-    Id:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: string
     Format:
       name: format
       in: path
@@ -41,6 +35,12 @@ components:
         enum:
         - json
         - html
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
   responses:
     StandardResponse:
       description: Standard JSON or HTML response
