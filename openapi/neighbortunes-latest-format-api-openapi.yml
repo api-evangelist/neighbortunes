@@ -26,11 +26,6 @@ paths:
       - Latest.{format}
 components:
   parameters:
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
     Format:
       name: format
       in: path
@@ -40,6 +35,11 @@ components:
         enum:
         - json
         - html
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
   responses:
     StandardResponse:
       description: Standard JSON or HTML response

@@ -27,12 +27,27 @@ paths:
       tags:
       - Shows.{format}
 components:
+  responses:
+    StandardResponse:
+      description: Standard JSON or HTML response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: integer
+                description: 0 for success, 1 for failure
+              error_message:
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+        text/html:
+          schema:
+            type: string
   parameters:
-    OrderBy:
-      name: order_by
-      in: query
-      schema:
-        type: string
     Limit:
       name: limit
       in: query
@@ -56,23 +71,8 @@ components:
         enum:
         - json
         - html
-  responses:
-    StandardResponse:
-      description: Standard JSON or HTML response
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: integer
-                description: 0 for success, 1 for failure
-              error_message:
-                type: string
-              data:
-                type: array
-                items:
-                  type: object
-        text/html:
-          schema:
-            type: string
+    OrderBy:
+      name: order_by
+      in: query
+      schema:
+        type: string
