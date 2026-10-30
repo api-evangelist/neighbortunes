@@ -1,4 +1,4 @@
-# Neighbortunes (neighbortunes)
+# Neighbortunes
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,47 +66,142 @@
 
 Welcome to NEIGHBORTUNES! The officially unofficial home of all things Neighbor. This site is a work in progress but we hope you enjoy being able to look up setlists, songs, teases, venues, band stats, and much more!
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/neighbortunes/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/neighbortunes/refs/heads/main/apis.yml)
+**Areas:** Music · Setlists · Fan Site
 
-## Scope
+## Neighbortunes on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Neighbortunes is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/neighbortunes/](https://apis.io/providers/neighbortunes/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (16)
 
-- Music
-- Setlists
-- Fan Site
+- [Neighbortunes Albums.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-albums-format-api/) — The Albums.{format} API from Neighbortunes — 1 operation(s) for albums.{format}.
+- [Neighbortunes Appearances.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-appearances-format-api/) — The Appearances.{format} API from Neighbortunes — 1 operation(s) for appearances.{format}.
+- [Neighbortunes Jamcharts.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-jamcharts-format-api/) — The Jamcharts.{format} API from Neighbortunes — 1 operation(s) for jamcharts.{format}.
+- [Neighbortunes Latest.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-latest-format-api/) — The Latest.{format} API from Neighbortunes — 1 operation(s) for latest.{format}.
+- [Neighbortunes Links.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-links-format-api/) — The Links.{format} API from Neighbortunes — 1 operation(s) for links.{format}.
+- [Neighbortunes List API](https://apis.io/apis/neighbortunes/neighbortunes-list-api/) — The List API from Neighbortunes — 1 operation(s) for list.
+- [Neighbortunes Metadata.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-metadata-format-api/) — The Metadata.{format} API from Neighbortunes — 1 operation(s) for metadata.{format}.
+- [Neighbortunes Setlists API](https://apis.io/apis/neighbortunes/neighbortunes-setlists-api/) — The Setlists API from Neighbortunes — 2 operation(s) for setlists.
+- [Neighbortunes Setlists.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-setlists-format-api/) — The Setlists.{format} API from Neighbortunes — 1 operation(s) for setlists.{format}.
+- [Neighbortunes Shows API](https://apis.io/apis/neighbortunes/neighbortunes-shows-api/) — The Shows API from Neighbortunes — 1 operation(s) for shows.
+- [Neighbortunes Shows.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-shows-format-api/) — The Shows.{format} API from Neighbortunes — 1 operation(s) for shows.{format}.
+- [Neighbortunes Songs API](https://apis.io/apis/neighbortunes/neighbortunes-songs-api/) — The Songs API from Neighbortunes — 1 operation(s) for songs.
+- [Neighbortunes Songs.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-songs-format-api/) — The Songs.{format} API from Neighbortunes — 1 operation(s) for songs.{format}.
+- [Neighbortunes Uploads.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-uploads-format-api/) — The Uploads.{format} API from Neighbortunes — 1 operation(s) for uploads.{format}.
+- [Neighbortunes Venues API](https://apis.io/apis/neighbortunes/neighbortunes-venues-api/) — The Venues API from Neighbortunes — 1 operation(s) for venues.
+- [Neighbortunes Venues.{format} API](https://apis.io/apis/neighbortunes/neighbortunes-venues-format-api/) — The Venues.{format} API from Neighbortunes — 1 operation(s) for venues.{format}.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-09
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Neighbortunes
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Neighbortunes REST API exposes setlists, shows, songs, venues, jamcharts, albums, metadata, links, uploads, and appearances. No authentication required.
+- [Neighbortunes Agentic Access](https://apis.io/agentic-access/neighbortunes/neighbortunes-agentic-access/)
 
-- **Human URL:** [https://www.neighbortunes.net/](https://www.neighbortunes.net/)
-- **Base URL:** `https://neighbortunes.net/api/v2`
+#### Collections (17)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Music
-- Setlists
+- [Neighbortunes API](https://apis.io/collections/neighbortunes/open-neighbortunes/)
+- [Neighbortunes Albums.{format} Albums.{format} Albums.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-albums-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Appearances.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-appearances-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Jamcharts.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-jamcharts-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Latest.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-latest-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Links.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-links-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} List API](https://apis.io/collections/neighbortunes/open-neighbortunes-list-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Metadata.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-metadata-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Setlists API](https://apis.io/collections/neighbortunes/open-neighbortunes-setlists-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Setlists.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-setlists-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Shows API](https://apis.io/collections/neighbortunes/open-neighbortunes-shows-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Shows.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-shows-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Songs API](https://apis.io/collections/neighbortunes/open-neighbortunes-songs-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Songs.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-songs-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Uploads.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-uploads-format-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Venues API](https://apis.io/collections/neighbortunes/open-neighbortunes-venues-api/)
+- [Neighbortunes Albums.{format} Albums.{format} Venues.{format} API](https://apis.io/collections/neighbortunes/open-neighbortunes-venues-format-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://www.neighbortunes.net/api/docs.php)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/neighbortunes/refs/heads/main/openapi/neighbortunes-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/neighbortunes.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/neighbortunes.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Maintainers
+- [Neighbortunes Domain Security](https://apis.io/security/neighbortunes/neighbortunes-domain-security/)
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Neighbortunes Plans Pricing](https://apis.io/plans/neighbortunes/neighbortunes-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Neighbortunes Rate Limits](https://apis.io/rate-limits/neighbortunes/neighbortunes-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Neighbortunes Finops](https://apis.io/finops/neighbortunes/neighbortunes-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://neighbortunes.net)
+
+## API Evangelist rating
+
+**Kin Score 18.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 39.8 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/neighbortunes/](https://apis.io/providers/neighbortunes/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Neighbortunes: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/neighbortunes/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
